@@ -8,9 +8,7 @@ This project contains 3 python scripts. <br>
 If you have this link, this means you are allowed to clone this repository to your machine and run an app. Make sure to open a folder since the modules are being imported through folder <br>
 ## Benchmarking of methods. 
 This method here shows better results because it optimizes the reach based on the concentration of target population. To prove it we use a random dataset shuffling with the same calculations.  <br>
-```
-(self.df_filtered = self.df[self.df['within_reach']].sort_values(by='estimated_target_population', ascending=False))
-```
+```(self.df_filtered = self.df[self.df['within_reach']].sort_values(by='estimated_target_population', ascending=False))```
 <br>
 So instead of this we use 
 <br>
@@ -20,4 +18,4 @@ self.df_filtered = self.df[self.df['within_reach']].sample(frac=1).reset_index(d
 <br>
 This test was done in private jupyter notebook. Demonstration is available upon request.
 <br>
-![Product View](image.png)
+<img width="931" alt="image" src="https://github.com/user-attachments/assets/71bd9cfc-3b82-4b0e-a5c3-d6f547a40912">
