@@ -1,3 +1,25 @@
+#Importing libraries to verify existing packages 
+import subprocess 
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# List of required packages
+required_packages = [
+    "pandas",
+    "dash"
+]
+
+# Attempt to import each package, and install it if it's not available
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
+
+user_input_path = input("Please enter the path where your files are located: ")
+
 from dash import Dash, html, dcc, Input, Output, dash_table, State
 import pandas as pd
 from data_preprocessing import DataProcessor
